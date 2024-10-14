@@ -1,5 +1,4 @@
-package solitaire;
-
+package resources;
 import java.util.ArrayList;
 import java.util.Queue;
 import java.util.Stack;

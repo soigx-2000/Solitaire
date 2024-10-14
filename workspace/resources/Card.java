@@ -1,4 +1,4 @@
-package solitaire;
+package resources;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -76,7 +76,7 @@ public class Card extends JPanel{
 		 * @return {String} Description of the current card
 		 */
 		public String toString() {
-			return valueString(value) + " of " + suit.name();
+			return valueString(value) + " of " + suit.name().toLowerCase();
 		}
 		
 		/**
@@ -99,11 +99,10 @@ public class Card extends JPanel{
 			
 			try {
 				// Load the image for the current file
-				URL url = getClass().getResource("../solitaire/images/cards/" + this.toString() +".png");
-				//System.out.println(this.getClass().getResource(""));
+				URL url = getClass().getResource(this.toString() +".png");
 				image = ImageIO.read(url);
 				//System.out.println(url);
-				URL urlback = getClass().getResource("../solitaire/images/cards/back.png"); 
+				URL urlback = getClass().getResource("back.png"); 
 				backImage = ImageIO.read(urlback);
 				
 				setBounds(0, 0, image.getWidth(), image.getHeight());

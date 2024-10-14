@@ -1,5 +1,4 @@
-package solitaire;
-
+package resources;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
@@ -13,7 +12,6 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
-import solitaire.Card.Suit;
 
 public class GUI extends JFrame implements ActionListener, MouseListener, MouseMotionListener{
 
@@ -27,8 +25,10 @@ public class GUI extends JFrame implements ActionListener, MouseListener, MouseM
        
        // this supplies the background
        try {
-    	   URL background = getClass().getResource("../solitaire/images/background.jpg");
-    	   setContentPane(new ImagePanel(ImageIO.read(background)));
+		System.out.println(getClass().toString());
+		Image blackImg = ImageIO.read(getClass().getResource("background.jpg"));
+		setContentPane(new ImagePanel(blackImg));
+
        }catch(IOException e) {
     	   e.printStackTrace();
        }
@@ -38,7 +38,7 @@ public class GUI extends JFrame implements ActionListener, MouseListener, MouseM
         * once you have confirmed that the card shows up properly. The code below should allow you to play the solitare
         * game once it's fully created.
         */
-       Card card = new Card(2, Suit.Diamonds);
+       Card card = new Card(2, Card.Suit.Diamonds);
        System.out.println(card);
        this.add(card);    
 
