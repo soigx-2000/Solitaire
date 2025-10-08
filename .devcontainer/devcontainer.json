@@ -15,5 +15,10 @@
         "vscjava.vscode-java-pack"
       ]
     }
-  }
+  },
+       "hostRequirements": {
+        "cpus": 4,
+        "memory": "16gb",
+        "storage": "32gb"
+      }
 }
