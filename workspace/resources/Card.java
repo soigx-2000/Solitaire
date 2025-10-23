@@ -20,7 +20,7 @@ public class Card extends JPanel{
 		// Members
 		public int value;
 		public Suit suit;
-		private BufferedImage image;
+		private BufferedImage image;//???
 		private BufferedImage backImage;
 		boolean isReversed;
 		Point positionOffset;
@@ -109,9 +109,8 @@ public class Card extends JPanel{
 			} catch(IOException e) {
 				e.printStackTrace();
 			}
-			
 			positionOffset = new Point(0,0);
-			setSize(new Dimension(100, 145));
+			setPreferredSize(new Dimension(100, 145));
 			setOpaque(false);
 		}
 		
