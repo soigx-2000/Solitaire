@@ -6,6 +6,7 @@ import java.util.Stack;
 public class CatFishing {
 	ArrayList<Stack <Card>> columns;
 	Queue<Card> deck;
+	int playerNum = 0;
 	
 	//the part of your program that's in charge of game rules goes here.
 	
